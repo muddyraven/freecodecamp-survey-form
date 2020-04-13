@@ -1,0 +1,152 @@
+/* First, set all elements box-sizing to border-box so that margin and padding are not added onto the width but factored into it. */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Choose colours for page once styled. */
+
+body {
+  background: Grey;
+  color: Dim;
+  line-height: 1.6;
+  font-family: sans-serif;
+  padding: 1em;
+}
+
+/* Setting margin-left and margin-right to auto centres the content. */
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+h1 {
+  text-align: center;
+  color: DarkOrange;
+}
+
+span {
+  color: GhostWhite;
+}
+
+.wrapper {
+  padding: 1em;
+  background: GhostWhite;
+  border-radius: 10px;
+}
+
+#description {
+  text-align: center;
+}
+
+/* Use the method below to achieve a table-like structure for labels without using a table. */
+
+.labels {
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  width: 350px;
+  padding: 10px;
+}
+
+.inputs {
+  width: 200px;
+  border: 2px solid DarkOrange;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.inputs:focus {
+  outline: none;
+}
+
+select {
+  background-color: White;
+  height: 40px;
+  width: 200px;
+  padding: 5px;
+  border: 2px solid DarkOrange;
+  border-radius: 10px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.fieldset {
+  border: 2px solid DarkOrange;
+  border-radius: 10px;
+  padding-left: 250px;
+}
+
+/* Styling textarea, the resize property can be used to prevent textareas from being resized. */
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 2px solid DarkOrange;
+  border-radius: 10px;
+  margin-top: 10px;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* Input elements are inline by default, display the button as a block with margin set to 0 auto in order to centre it. */
+
+button {
+  display: block;
+  margin: 0 auto;
+  background-color: DarkOrange;
+  border-radius: 5px;
+  color: White;
+  font-size: 1em;
+  height: 45px;
+  width: 100px;
+  border: 0px solid;
+}
+
+button:hover {
+  color: DarkOrange;
+  background: white;
+  border: 2px solid DarkOrange;
+}
+
+/* Media quieries to make form responsive for smaller screens. I think the styling is a little sketchy, but it has achieved my goals. Need to refine it next time! */
+
+@media screen and (max-width: 768px) {
+  .labels {
+    width: 300px;
+  }
+  .fieldset {
+    padding-left: 200px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  body {
+    font-size: 90%;
+  }
+  .labels {
+    width: 120px;
+    margin-right: 0px;
+  }
+  .inputs {
+    width: 140px;
+  }
+  select {
+    width: 140px;
+  }
+  p {
+    padding-bottom: 10px;
+  }
+  .fieldset {
+    padding-left: 10px;
+  }
+}

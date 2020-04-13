@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FreeCodeCamp Survey Form</title>
+  <head>
+  <title>Website Design Questionnaire</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- freeCodeCamp responsive web design project 2: Build a Survey Form -->
+
+<body>
+  <div class="container">
+    <h1 id="title"><span>Website</span> Design Questionnaire</h1>
+    <div class="wrapper">
+      <p id="description">Please fill out the form below to let me know how I can help you</p>
+      
+      <!-- Input/label pairs can be wrapped in divs or paragraphs, etc. There are several ways to style forms in HTML and CSS, and that's the point! Use whatever is preferred as long as good practice/semantic code is maintained. Note: using the id attribute with input elements allows the label element's text to select the corresponding input field, thus improving usability. Like it! -->
+      
+      <form id="survey-form" action="/my-handling-form-page" method="get">
+        <p>
+          <label class="labels" id="name-label" for="name">Name:</label>
+          <input class="inputs" id="name" autofocus type="text" name="name" placeholder="Enter your name" required />
+        </p>
+        <p>
+          <label class="labels" id="email-label" for="email">Email:</label>
+          <input class="inputs" id="email" type="email" name="email" placeholder="Enter your email" required />
+        </p>
+        <p>
+          <label class="labels" id="number-label" for="number">Tel:</label>
+          <input class="inputs" id="number" type="number" name="tel" min="0" max="1000000000" placeholder="Telephone No." />
+        </p>
+        <p>
+        <label class="labels" for="find-me">How did you find me?</label>
+          <select id="dropdown" name="find-me">
+            <option disabled value>Select an option</option>
+            <option value="my-website">Via my website</option>
+            <option value="from-another-client">From another client</option>
+            <option value="internet-search">Internet search</option>
+            <option value="social-media">Social media</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+    
+        <!-- For best practice (and semantic HTML), use <fieldset> to group buttons and checkboxes. They can be styled various ways though, so use personal preference to do so. -->
+        <p>
+          <fieldset class="fieldset">
+            <legend>What type of website do you require?</legend>
+            <div>
+              <input type="radio" id="site-1" name="site-type" value="Website, blog, content & hosting" checked="checked" />
+              <label for="site-1">Website, blog, content & hosting</label>
+            </div>
+            <div>
+              <input type="radio" id="site-2" name="site-type" value="Website, content & hosting" />
+              <label for="site-2">Website, content & hosting</label>
+            </div>
+            <div>
+              <input type="radio" id="site-3" name="site-type" value="Website with blog/content" />
+              <label for="site-3">Website with blog/content</label>
+            </div>
+            <div>
+              <input type="radio" id="site-4" name="site-type" value="Website, content will be provided" />
+              <label for="site-4">Website, content will be provided</label>
+            </div>
+            <div>
+              <input type="radio" id="site-5" name="site-type" value="Other" />
+              <label for="site-5">Other</label>
+            </div>
+          </fieldset>
+        </p>
+    
+        <p>
+          <fieldset class="fieldset">
+            <legend>What are you looking for in your new website?</legend>
+            <div>
+              <input type="checkbox" id="responsive" name="new-site" value="responsive" checked="checked" />
+              <label for="responsive">Responsive website</label>
+            </div>
+            <div>
+              <input type="checkbox" id="mobile-first" name="new-site" value="mobile-first" />
+              <label for="mobile-first">Mobile first</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ecommerce"  name="new-site" value="ecommerce" />
+              <label for="ecommerce">eCommerce</label>
+            </div>
+            <div>
+              <input type="checkbox" id="seo" name="new-site" value="seo" />
+              <label for="seo">Search engine optimisation</label> 
+            </div>
+          </fieldset>
+        </p>
+    
+        <p>
+          <label for="comments">List 3 websites you like, along with what you <em>do</em> and <em>don't</em> like for each. Feel free to add any extra comments.</label>
+          <textarea id="comments" name="comments" placeholder="Enter text here..."></textarea>
+        </p>
+    
+        <!-- The <button> element has replaced <input type="button" /> in HTML5, it is also easier to style in CSS. -->
+        
+        <button id="submit" type="submit">Submit</button>
+      
+      </form>
+    </div>
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
